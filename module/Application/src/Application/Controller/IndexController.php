@@ -16,6 +16,20 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        return new ViewModel();
+        /*
+        $currentSiteDetails = new Container('currentSiteDetails');
+        $siteLayout = $currentSiteDetails->currentSiteDetails['layout'];
+        $siteLayoutConfig = $this->_getLayoutConfig()['layouttype'];//
+        $widgetConfigArry = $this->_getLayoutConfig()['widget'];//
+        */
+        $layout  = $this->layout();
+        
+        $v1 = $this->forward()->dispatch($widgetConfigArry[$segment]['controller'], array_merge(array('action' => $widgetConfigArry[$segment]['action']), $param));
+           
+        $this->layout()->addChild($v1, $segment);  
+        
+        
+        //$this->layout()->setVariable('current_site_details', $currentSiteDetails->currentSiteDetails);
+        //$this->layout()->setVariable('currentLayoutConfigArry', $currentLayoutConfigArry);
     }
 }
