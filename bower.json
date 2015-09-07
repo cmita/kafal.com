@@ -1,0 +1,20 @@
+{
+  "name": "kafal",
+  "version": "0.0.0",
+  "authors": [
+    "Shreemita Tuladhar"
+  ],
+  "description": "resturant",
+  "license": "MIT",
+  "homepage": "www.kafal.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5"
+  }
+}

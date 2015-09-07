@@ -1,0 +1,91 @@
+html{
+	margin:0;
+	padding:0;
+	font-family: 'Rokkitt', sans-serif;
+	font-size:16px;
+	
+}
+body{
+	width:100%;
+}
+.clear{
+	clear:both;
+}
+
+.main {
+	background:$navmenu;
+	color:#cccccc;
+	ul{
+		margin:0;
+		li{
+			list-style-type:none;
+			display:inline-block;
+			min-width:145px;
+			padding:15px;
+			border-right:1px solid #ffffff;
+			font-size:12px;
+			text-align:center;
+			text-transform: upperCase;
+			&:hover{
+				background:#080808;
+				color:#ffffff;
+			}
+		}
+	}
+	.selected{
+		background:#080808;
+		color:#ffffff;
+	}
+	
+	
+}
+.title{
+	ul{
+		margin:0;
+		li{
+			list-style-type:none;
+			display:inline-block;
+			min-width:115px;
+			padding:15px;
+			font-size:14px;
+			text-align:center;
+			text-transform: upperCase;
+		}
+	}
+	.logo{
+		margin-left: 28px;
+    	padding: 5px;
+	}
+	.subMenu{
+		float:right;
+	}
+	.underline{
+		border-bottom: 2px solid #080808;
+	}
+	
+}
+
+.midBanner{
+	background: -moz-linear-gradient(top, #fcfff4 0%, #e9e9ce 100%);
+	background: -webkit-linear-gradient(top, #fcfff4 0%,#e9e9ce 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#e9e9ce',GradientType=0 );
+	box-shadow: 0px 10px 5px #888888;
+	.row{
+		text-align: center;
+    	padding: 40px 0;
+    	font-size: 28px;
+	}
+}
+.detailSection{
+	padding:40px 0;
+	.title{
+		padding: 20px 0 5px 0;
+    	font-size: 18px;
+    	font-weight: 700;
+	}
+	.subTitle{
+		padding: 0 0 10px 0;
+    	font-size: 16px;
+    }
+}
+
