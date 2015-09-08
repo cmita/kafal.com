@@ -1,10 +1,9 @@
 <?php 
     echo $this->doctype(); 
-    echo $this->partial("/partial/head.phtml");
 ?>
 
 <html lang="en">
-    
+    <?php echo $this->partial("/partial/head.phtml");?>
     <body>
         <?php 
             echo $this->partial("/partial/header.phtml");
