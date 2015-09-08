@@ -7323,12 +7323,13 @@ button.close {
 html {
   margin: 0;
   padding: 0;
-  font-family: 'Rokkitt', sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 16px;
 }
 
 body {
   width: 100%;
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 
 .clear {
@@ -7341,6 +7342,7 @@ body {
 }
 .main ul {
   margin: 0;
+  padding: 0;
 }
 .main ul li {
   list-style-type: none;
@@ -7361,27 +7363,12 @@ body {
   color: #ffffff;
 }
 
-.title ul {
-  margin: 0;
-}
-.title ul li {
-  list-style-type: none;
-  display: inline-block;
-  min-width: 115px;
-  padding: 15px;
-  font-size: 14px;
-  text-align: center;
-  text-transform: upperCase;
-}
-.title .logo {
-  margin-left: 28px;
-  padding: 5px;
-}
-.title .subMenu {
+.navigation {
   float: right;
 }
-.title .underline {
-  border-bottom: 2px solid #080808;
+
+.navbar-brand img {
+  margin-top: -15px;
 }
 
 .midBanner {
@@ -7395,28 +7382,102 @@ body {
   padding: 40px 0;
   font-size: 28px;
 }
-
-.detailSection {
-  padding: 40px 0;
+.midBanner .welcome {
+  font-weight: 700;
+  letter-spacing: 8px;
+  color: #8E0707;
 }
+.midBanner .cusine {
+  letter-spacing: 8px;
+}
+
 .detailSection .title {
   padding: 20px 0 5px 0;
   font-size: 18px;
   font-weight: 700;
+  color: #8E0707;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
 }
 .detailSection .subTitle {
   padding: 0 0 10px 0;
   font-size: 16px;
 }
+.detailSection .header {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.detailSection .address {
+  margin-bottom: 20px;
+  line-height: 22px;
+  font-size: 14px;
+}
+.detailSection .comment {
+  width: 78%;
+  margin-bottom: 21px;
+  line-height: 22px;
+}
+.detailSection .form-control {
+  width: 73%;
+}
+.detailSection button {
+  background-color: #67C4E6;
+  color: white;
+  width: 130px;
+}
+.detailSection .details {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.footer {
+  background: #222222;
+  color: #cccccc;
+  margin-top: 35px;
+}
+.footer .title {
+  padding: 20px 0 5px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.footer .details {
+  padding: 20px 0;
+}
+
+#map {
+  width: 500px;
+  height: 400px;
+}
 
 .cmi-foodbox-container {
-  height: 400px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  height: 166px;
+  margin: 65px 0;
 }
 
 .cmi-foodlist-container {
   height: 6em;
+}
+
+.cmi-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.cmi-container p {
+  line-height: 22px;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+h4 {
+  font-weight: 700;
+}
+
+cmi-message {
+  line-height: 22px;
+  font-size: 13px;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=base.css.map */

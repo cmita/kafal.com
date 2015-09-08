@@ -7,7 +7,6 @@
         
     <body>
         <?php 
-            echo $this->partial("/partial/header.phtml");
             echo $this->partial("/partial/navigation.phtml");
         ?>
         
@@ -16,27 +15,33 @@
             <div class='row'>
                 <div class='col-md-9'>
                     <div class="imageSection">
-                        <img src="/img/kafal.jpg" alt="kafal">
+                        <img class="img-responsive" src="/img/kafal.jpg" alt="kafal">
                     </div>
                 </div>
                  <div class='col-md-3'>
                     <div class='cmi-container'>
                         <h4>LOCATION</h4>
-                        <p>25 Yerba Buena Lane</p>
-                        <p>San Francisco CA 94103</p>
-                        <p>Phone: 415-777-0500</p>
+                        <p>
+                            25 Yerba Buena Lane</br>
+                            San Francisco CA 94103<br>
+                            Phone: 415-777-0500
+                        </p>
                     </div>   
                     
                     <div class='cmi-container'>    
                         <h4>LUNCH HOURS</h4>
-                        <p>Mon - Fri : 11:30am - 2:30pm</p>
-                        <p>Sat - Sun : 12:00pm - 3:00pm</p>
+                        <p>
+                            Mon - Fri : 11:30am - 2:30pm</br>
+                            Sat - Sun : 12:00pm - 3:00pm
+                        </p>
                      </div>     
                         
                      <div class='cmi-container'>   
                         <h4>DINNER HOURS</h4>
-                        <p>Sun - Thu : 5:00pm - 10:00pm</p>
-                        <p>Fri - Sat : 5:00pm - 10:30pm </p>
+                        <p>
+                            Sun - Thu : 5:00pm - 10:00pm</br>
+                            Fri - Sat : 5:00pm - 10:30pm 
+                        </p>
                      </div>     
                     </div>
                 </div>
@@ -47,7 +52,7 @@
             <div class="container">
                 <div class="row">
                     <p class="welcome">Welcome to Kafal Resturant</p>
-                    <p>Special in Indian and Nepali Cusine</p>
+                    <p class="cusine">Special in Indian and Nepali Cusine</p>
                 </div>
             </div>
         </div>
@@ -58,12 +63,7 @@
                
             </div>
         </div>
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                </div>
-            </div>
-        </div>
+        <?php echo $this->partial("/partial/footer.phtml");?>
 
 </body>
 </html>

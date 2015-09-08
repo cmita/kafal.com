@@ -40,5 +40,13 @@ class IndexController extends AbstractActionController
          
         $this->layout()->addChild($v1, "footItems");
     }
+
+    public function contactAction(){
+        $this->layout('/layout/contact.phtml');
+        $layout  = $this->layout();
+        //$v1 = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "tabmenu"), array()));
+         
+        //$this->layout()->addChild($v1, "footItems");
+    }
     
 }
