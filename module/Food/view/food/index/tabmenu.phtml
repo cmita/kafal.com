@@ -1,0 +1,17 @@
+<div class='row'>
+   <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#cmi-tab-appitizer" aria-controls="appitizer" role="tab" data-toggle="tab">Appitizer</a></li>
+        <li role="presentation"><a href="#cmi-tab-entry" aria-controls="entry" role="tab" data-toggle="tab">Entry</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="cmi-tab-appitizer">
+         <?php echo $this->partialLoop('food/menuitem-list.phtml', $this->appitizer);?>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="cmi-tab-entry">
+        <?php echo $this->partialLoop('food/menuitem-list.phtml', $this->entry);?>
+    </div>
+  </div>
+
+</div>

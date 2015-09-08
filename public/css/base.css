@@ -7409,4 +7409,14 @@ body {
   font-size: 16px;
 }
 
-/*# sourceMappingURL=app.css.map */
+.cmi-foodbox-container {
+  height: 400px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cmi-foodlist-container {
+  height: 6em;
+}
+
+/*# sourceMappingURL=base.css.map */

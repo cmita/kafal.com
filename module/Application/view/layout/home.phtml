@@ -1,0 +1,89 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('ZF2 '. $this->translate('Kafal'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->prependStylesheet($this->basePath('css/base.css'))
+                        //->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
+                        ->prependStylesheet($this->basePath('css/bootstrap.min.css')) ?>
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->prependFile($this->basePath('js/bootstrap.min.js'))
+            ->prependFile($this->basePath('js/jquery.min.js'))
+            ->prependFile($this->basePath('js/respond.min.js'), 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath('js/html5shiv.min.js'),   'text/javascript', array('conditional' => 'lt IE 9',))
+        ; ?>
+
+    </head>
+    <body>
+        <?php 
+            echo $this->partial("/partial/header.phtml");
+            echo $this->partial("/partial/navigation.phtml");
+        ?>
+        
+        
+        <div class="container">
+            <div class='row'>
+                <div class='col-md-9'>
+                    <div class="imageSection">
+                        <img src="/img/kafal.jpg" alt="kafal">
+                    </div>
+                </div>
+                 <div class='col-md-3'>
+                    <div class='cmi-container'>
+                        <h4>LOCATION</h4>
+                        <p>25 Yerba Buena Lane</p>
+                        <p>San Francisco CA 94103</p>
+                        <p>Phone: 415-777-0500</p>
+                    </div>   
+                    
+                    <div class='cmi-container'>    
+                        <h4>LUNCH HOURS</h4>
+                        <p>Mon - Fri : 11:30am - 2:30pm</p>
+                        <p>Sat - Sun : 12:00pm - 3:00pm</p>
+                     </div>     
+                        
+                     <div class='cmi-container'>   
+                        <h4>DINNER HOURS</h4>
+                        <p>Sun - Thu : 5:00pm - 10:00pm</p>
+                        <p>Fri - Sat : 5:00pm - 10:30pm </p>
+                     </div>     
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="midBanner">
+            <div class="container">
+                <div class="row">
+                    <p class="welcome">Welcome to Kafal Resturant</p>
+                    <p>Special in Indian and Nepali Cusine</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="detailSection">
+            <div class="container">
+                <?php echo $this->footItems; ?>
+               
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
