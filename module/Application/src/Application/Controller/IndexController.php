@@ -26,7 +26,7 @@ class IndexController extends AbstractActionController
         $this->layout('/layout/home.phtml');
         $v1 = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "foodmenu"), array()));
            
-        $this->layout()->addChild($v1, "footItems");  
+        $this->layout()->addChild($v1, "foodItems");  
         
         
         //$this->layout()->setVariable('current_site_details', $currentSiteDetails->currentSiteDetails);
