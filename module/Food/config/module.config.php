@@ -10,7 +10,7 @@
 return array(
     'router' => array(
         'routes' => array(
-            'home' => array(
+            'items' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
                     'route'    => '/item',
@@ -73,7 +73,7 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Food\Controller\Index' => 'Food\Controller\IndexController'
+            'Food\Controller\Index' => 'Food\Controller\IndexController',
         ),
     ),
     'view_manager' => array(

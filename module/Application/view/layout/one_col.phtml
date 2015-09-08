@@ -1,0 +1,28 @@
+<?php 
+    echo $this->doctype(); 
+    echo $this->partial("/partial/head.phtml");
+?>
+
+<html lang="en">
+    
+    <body>
+        <?php 
+            echo $this->partial("/partial/header.phtml");
+            echo $this->partial("/partial/navigation.phtml");
+        ?>
+    
+        <div class="detailSection">
+            <div class="container">
+                <?php echo $this->footItems; ?>
+               
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>

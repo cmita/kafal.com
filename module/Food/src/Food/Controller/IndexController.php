@@ -14,8 +14,52 @@ use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
-    public function indexAction()
+    public function indexAction(){
+        
+        
+    }
+    
+    public function foodmenuAction()
     {
-        return new ViewModel();
+        
+        $sm = $this->getServiceLocator();
+        $foodObj = $sm->get("Food\Model\FoodModel");
+        $foodItem = $foodObj->getFoodMenu();
+        
+        $view = new ViewModel();
+        $view->setTemplate("food/index/foodmenu.phtml"); //foo/baz-bat/do-something-crazy
+        
+        $variables = array(
+            'foodItem' => $foodItem,
+        );
+        
+        $view = new ViewModel();
+        $view->setVariables($variables);
+        $this->layout()->setVariables($variables);
+        return $view;
+    }
+    
+
+    public function tabmenuAction()
+    {
+    
+        $sm = $this->getServiceLocator();
+        $foodObj = $sm->get("Food\Model\FoodModel");
+        $appetizer = $foodObj->getFoodMenuByTag('appetizer');
+        $entry = $foodObj->getFoodMenuByTag('entry');
+        $drink = $foodObj->getFoodMenuByTag('drink');
+        $view = new ViewModel();
+        $view->setTemplate("food/index/foodmenu.phtml"); //foo/baz-bat/do-something-crazy
+    
+        $variables = array(
+            'appitizer' => $appetizer,
+            'entry' => $entry,
+            'drink' => $drink,
+        );
+    
+        $view = new ViewModel();
+        $view->setVariables($variables);
+        $this->layout()->setVariables($variables);
+        return $view;
     }
 }

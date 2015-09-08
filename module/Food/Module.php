@@ -36,4 +36,17 @@ class Module
             ),
         );
     }
+    
+
+    public function getServiceConfig() {
+        return array(
+            'factories' => array(
+                'Food\Model\FoodModel' => function($sm) {
+                    $foodModel = new \Food\Model\FoodModel();
+                    return $foodModel;
+                },
+            ),
+        );
+    }
+    
 }
