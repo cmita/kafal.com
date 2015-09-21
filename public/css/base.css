@@ -7363,12 +7363,24 @@ body {
   color: #ffffff;
 }
 
+.navbar.cmi-header {
+  height: 102px;
+  background-color: #000000;
+}
+
 .navigation {
   float: right;
 }
 
 .navbar-brand img {
-  margin-top: -15px;
+  height: 100px;
+}
+
+.cmi-foodlist-container {
+  height: 150px;
+}
+.cmi-foodlist-container .title {
+  font-size: 22px;
 }
 
 .midBanner {
@@ -7393,8 +7405,7 @@ body {
 
 .detailSection .title {
   padding: 20px 0 5px 0;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 20px;
   color: #8E0707;
   margin-bottom: 15px;
   letter-spacing: 2px;
@@ -7457,7 +7468,7 @@ body {
 }
 
 .cmi-foodlist-container {
-  height: 6em;
+  height: 120px;
 }
 
 .cmi-container {

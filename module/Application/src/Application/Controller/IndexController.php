@@ -23,8 +23,10 @@ class IndexController extends AbstractActionController
         $widgetConfigArry = $this->_getLayoutConfig()['widget'];//
         */
         $layout  = $this->layout();
-        $this->layout('/layout/home.phtml');
-        $v1 = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "foodmenu"), array()));
+        $this->layout('/layout/home2.phtml');
+        //$v1 = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "foodmenu"), array()));
+        
+        $v1 = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "tabmenu"), array()));
            
         $this->layout()->addChild($v1, "foodItems");  
         

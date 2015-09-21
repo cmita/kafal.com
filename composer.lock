@@ -4,8 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4c0789f5bf2bb3afed5456729b9f19e3",
+    "hash": "291c1f7f17dd252279f63fa28f8f63ab",
     "packages": [
+        {
+            "name": "al3xdm/twilio-zf2",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/al3xdm/Twilio.git",
+                "reference": "ee5a41c18c2e8b925002922c1f78d618fef7110e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/al3xdm/Twilio/zipball/ee5a41c18c2e8b925002922c1f78d618fef7110e",
+                "reference": "ee5a41c18c2e8b925002922c1f78d618fef7110e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "twilio/sdk": "3.*",
+                "zendframework/zend-modulemanager": "2.*",
+                "zendframework/zend-servicemanager": "2.*",
+                "zendframework/zend-stdlib": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Twilio": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "A Zend Framework 2 module for accessing the Twilio PHP Service",
+            "homepage": "https://www.github.com/al3xdm/twilio-zf2",
+            "keywords": [
+                "twilio",
+                "zf2"
+            ],
+            "time": "2014-09-19 11:07:18"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.0.5",
@@ -910,16 +946,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.7.3",
+            "version": "v2.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "71340e996171474a53f3d29111d046be4ad8a0ff"
+                "reference": "2dc7b06c065df96cc686c66da2705e5e18aef661"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/71340e996171474a53f3d29111d046be4ad8a0ff",
-                "reference": "71340e996171474a53f3d29111d046be4ad8a0ff",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/2dc7b06c065df96cc686c66da2705e5e18aef661",
+                "reference": "2dc7b06c065df96cc686c66da2705e5e18aef661",
                 "shasum": ""
             },
             "require": {
@@ -955,7 +991,57 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-07-28 14:07:07"
+            "time": "2015-08-24 07:13:45"
+        },
+        {
+            "name": "twilio/sdk",
+            "version": "3.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twilio/twilio-php.git",
+                "reference": "43bee3cc0956447efa1b83ee39b7a59b1b90df06"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/43bee3cc0956447efa1b83ee39b7a59b1b90df06",
+                "reference": "43bee3cc0956447efa1b83ee39b7a59b1b90df06",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.1"
+            },
+            "require-dev": {
+                "mockery/mockery": ">=0.7.2",
+                "phpunit/phpunit": "4.5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Services_Twilio": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Burke",
+                    "email": "kevin@twilio.com"
+                },
+                {
+                    "name": "Kyle Conroy",
+                    "email": "kyle+pear@twilio.com"
+                }
+            ],
+            "description": "A PHP wrapper for Twilio's API",
+            "homepage": "http://github.com/twilio/twilio-php",
+            "keywords": [
+                "api",
+                "sms",
+                "twilio"
+            ],
+            "time": "2015-03-31 21:34:10"
         },
         {
             "name": "zendframework/zend-authentication",
@@ -1870,20 +1956,20 @@
         },
         {
             "name": "zendframework/zend-form",
-            "version": "2.5.1",
+            "version": "2.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-form.git",
-                "reference": "a3b9151013e419e4401f66726746abdba174ed21"
+                "reference": "576ef1010c36f657135ada7b124220f4cf0f56bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-form/zipball/a3b9151013e419e4401f66726746abdba174ed21",
-                "reference": "a3b9151013e419e4401f66726746abdba174ed21",
+                "url": "https://api.github.com/repos/zendframework/zend-form/zipball/576ef1010c36f657135ada7b124220f4cf0f56bf",
+                "reference": "576ef1010c36f657135ada7b124220f4cf0f56bf",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.23",
+                "php": ">=5.5",
                 "zendframework/zend-inputfilter": "~2.5",
                 "zendframework/zend-stdlib": "~2.5"
             },
@@ -1938,7 +2024,7 @@
                 "form",
                 "zf2"
             ],
-            "time": "2015-06-03 15:32:01"
+            "time": "2015-09-09 17:10:58"
         },
         {
             "name": "zendframework/zend-http",
@@ -3839,16 +3925,150 @@
                 "zf2"
             ],
             "time": "2015-08-03 14:50:10"
+        },
+        {
+            "name": "zf-commons/zfc-base",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ZF-Commons/ZfcBase.git",
+                "reference": "fc68a49b58ba68584a9a4c44a1ca9df12b30d1bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ZF-Commons/ZfcBase/zipball/fc68a49b58ba68584a9a4c44a1ca9df12b30d1bf",
+                "reference": "fc68a49b58ba68584a9a4c44a1ca9df12b30d1bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-db": "~2.1",
+                "zendframework/zend-eventmanager": "~2.1",
+                "zendframework/zend-loader": "~2.1",
+                "zendframework/zend-modulemanager": "~2.1",
+                "zendframework/zend-mvc": "~2.1",
+                "zendframework/zend-servicemanager": "~2.1",
+                "zendframework/zend-stdlib": "~2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ZfcBase": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Kyle Spraggs",
+                    "email": "theman@spiffyjr.me",
+                    "homepage": "http://www.spiffyjr.me/"
+                },
+                {
+                    "name": "Evan Coury",
+                    "email": "me@evancoury.com",
+                    "homepage": "http://blog.evan.pro/"
+                }
+            ],
+            "description": "A set of genetic (abstract) classes which are commonly used across multiple modules.",
+            "homepage": "https://github.com/ZF-Commons/ZfcBase",
+            "keywords": [
+                "zf2"
+            ],
+            "time": "2013-05-02 12:33:49"
+        },
+        {
+            "name": "zf-commons/zfc-user",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ZF-Commons/ZfcUser.git",
+                "reference": "245c20ba77fc1c99c695fab78760a922e293cf16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ZF-Commons/ZfcUser/zipball/245c20ba77fc1c99c695fab78760a922e293cf16",
+                "reference": "245c20ba77fc1c99c695fab78760a922e293cf16",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-authentication": "~2.1",
+                "zendframework/zend-crypt": "~2.1",
+                "zendframework/zend-form": "~2.1",
+                "zendframework/zend-http": "~2.1",
+                "zendframework/zend-inputfilter": "~2.1",
+                "zendframework/zend-loader": "~2.1",
+                "zendframework/zend-modulemanager": "~2.1",
+                "zendframework/zend-mvc": "~2.1",
+                "zendframework/zend-servicemanager": "~2.1",
+                "zendframework/zend-session": "~2.1",
+                "zendframework/zend-stdlib": "~2.1",
+                "zendframework/zend-validator": "~2.1",
+                "zendframework/zend-view": "~2.1",
+                "zf-commons/zfc-base": "~0.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=3.7,<4",
+                "squizlabs/php_codesniffer": "1.4.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "ZfcUser": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Spraggs",
+                    "email": "theman@spiffyjr.me",
+                    "homepage": "http://www.spiffyjr.me/"
+                },
+                {
+                    "name": "Evan Coury",
+                    "email": "me@evancoury.com",
+                    "homepage": "http://blog.evan.pro/"
+                },
+                {
+                    "name": "Daniel Strøm",
+                    "email": "ds@eye4web.dk",
+                    "homepage": "http://eye4web.dk/"
+                }
+            ],
+            "description": "A generic user registration and authentication module for ZF2. Supports multiple adapters with built-in support for Zend\\Db.",
+            "homepage": "https://github.com/ZF-Commons/ZfcUser",
+            "keywords": [
+                "Authentication",
+                "zf2"
+            ],
+            "time": "2015-07-20 19:47:14"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "zf-commons/zfc-user": 20,
+        "al3xdm/twilio-zf2": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.5"
+        "php": ">=5.3.3"
     },
     "platform-dev": []
 }
