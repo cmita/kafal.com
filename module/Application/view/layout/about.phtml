@@ -1,0 +1,38 @@
+<?php 
+    echo $this->doctype(); 
+?>
+
+<html lang="en">
+    <?php echo $this->partial("/partial/head.phtml");?>
+        
+    <body>
+        <?php 
+            echo $this->partial("/partial/logoHeader.phtml");
+        ?>
+        <div class='row'>
+           <?php  
+                echo $this->partial("/partial/mainMenu.phtml");
+             ?>
+            <div class='col-md-7 content'>
+                <div class='row back-img slide'>  
+                    <h4>
+                        About Us
+                    </h4>
+                    <div class="info">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus arcu in diam elementum lobortis. Integer vehicula semper lorem. In at risus aliquet, malesuada magna ac, convallis ligula. Mauris mauris tellus, blandit eu elementum ac, tempus sit amet odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer rutrum faucibus nisl, ut maximus tortor. Curabitur sodales tortor ante, ut iaculis leo gravida in.
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="info">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus arcu in diam elementum lobortis. Integer vehicula semper lorem. In at risus aliquet, malesuada magna ac, convallis ligula. Mauris mauris tellus, blandit eu elementum ac, tempus sit amet odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer rutrum faucibus nisl, ut maximus tortor. Curabitur sodales tortor ante, ut iaculis leo gravida in.
+                    </div>
+                </div>
+            </div>
+            <?php  
+                echo $this->partial("/partial/sideContent.phtml");
+             ?>
+        </div>
+    </body>
+
+</html>
+

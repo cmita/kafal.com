@@ -7330,10 +7330,56 @@ html {
 body {
   width: 100%;
   font-family: 'Open Sans', Arial, sans-serif;
+  background-color: #000000;
 }
 
 .clear {
   clear: both;
+}
+
+.header .logo {
+  text-align: center;
+}
+.header .logo img {
+  width: 101%;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #555;
+  padding-bottom: 35px;
+  padding-top: 10px;
+}
+
+.slide {
+  width: 0px;
+}
+
+.menu ul {
+  color: #FFFFFF;
+  font-weight: 300;
+  font-size: 20px;
+  list-style: none;
+  padding-left: 8%;
+}
+.menu ul li {
+  border-bottom: 3px solid #555;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.menu ul li a {
+  color: #FFFFFF;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.content {
+  background-image: url("http://american.expert/wp-content/uploads/2015/03/cibo-indiano-1.jpg");
+  min-height: 400px;
+}
+.content .back-img {
+  background-color: #000000;
+  opacity: 0.8;
+  color: #FFFFFF;
+  padding: 0px 20px;
+  min-height: inherit;
 }
 
 .main {
@@ -7401,60 +7447,6 @@ body {
 }
 .midBanner .cusine {
   letter-spacing: 8px;
-}
-
-.detailSection .title {
-  padding: 20px 0 5px 0;
-  font-size: 20px;
-  color: #8E0707;
-  margin-bottom: 15px;
-  letter-spacing: 2px;
-}
-.detailSection .subTitle {
-  padding: 0 0 10px 0;
-  font-size: 16px;
-}
-.detailSection .header {
-  font-size: 17px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-.detailSection .address {
-  margin-bottom: 20px;
-  line-height: 22px;
-  font-size: 14px;
-}
-.detailSection .comment {
-  width: 78%;
-  margin-bottom: 21px;
-  line-height: 22px;
-}
-.detailSection .form-control {
-  width: 73%;
-}
-.detailSection button {
-  background-color: #67C4E6;
-  color: white;
-  width: 130px;
-}
-.detailSection .details {
-  margin-top: 12px;
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.footer {
-  background: #222222;
-  color: #cccccc;
-  margin-top: 35px;
-}
-.footer .title {
-  padding: 20px 0 5px 0;
-  font-size: 18px;
-  font-weight: 700;
-}
-.footer .details {
-  padding: 20px 0;
 }
 
 #map {

@@ -4,15 +4,17 @@
 
 <html lang="en">
     <?php echo $this->partial("/partial/head.phtml");?>
-
+        
     <body>
         <?php 
-            echo $this->partial("/partial/navigation.phtml");
+            echo $this->partial("/partial/logoHeader.phtml");
         ?>
-    
-        <div class="detailSection">
-            <div class="container">
-                <div class="row">
+        <div class='row'>
+           <?php  
+                echo $this->partial("/partial/mainMenu.phtml");
+             ?>
+            <div class='col-md-7 content'>
+                <div class='row back-img'>
                     <div class ="clo-lg-6 col-md-6 col-sm-12">
                         <h4>
                             Address
@@ -48,14 +50,14 @@
                         </form>
                     </div>
                      <div class ="clo-lg-6 col-md-6 col-sm-12">
-                        <div id="map"></div>
+                       <div id="map"></div>
                     </div>
                 </div>
-               
             </div>
+            <?php  
+                echo $this->partial("/partial/sideContent.phtml");
+             ?>
         </div>
-
-        <?php echo $this->partial("/partial/footer.phtml");?>
-
-</body>
+    </body>
 </html>
+
