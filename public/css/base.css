@@ -7337,6 +7337,10 @@ body {
   clear: both;
 }
 
+a {
+  color: #ffffff;
+}
+
 .header .logo {
   text-align: center;
 }
