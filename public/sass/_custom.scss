@@ -26,13 +26,13 @@ body {
 		}
 	}
 }
-.slide{
+/*.slide{
 	display:none;
 }
 #cmi-container-aboutus{
 	width:0;
 	display:none;
-}
+}*/
 .menu {
 	ul {
 		color: #FFFFFF;
@@ -109,9 +109,7 @@ body {
 }
 .cmi-foodlist-container{
 	height: 150px;
-	.title{
-	 font-size: 22px;
-	}
+	
 }
 
 .midBanner{
@@ -153,7 +151,7 @@ body {
 	margin-top:20px;
 	p{
 		line-height:22px;
-		font-size:13px;
+		font-size:14px;
 		font-weight:300;
 	}
 	
@@ -167,3 +165,24 @@ cmi-message{
 	font-weight:300;
 }
 
+
+.cmi-title{
+	 font-size: 20px;
+}
+.cmi-details{
+	 line-height: 22px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.cmi-container-service{
+	background-color: #959391;
+	padding:10px;
+	min-height: 330px;
+	img{
+		height:190px;
+		width:205px;
+	}
+	p{
+	  padding:0 8px;
+	}
+}

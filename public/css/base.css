@@ -7348,15 +7348,13 @@ body {
   padding-top: 10px;
 }
 
-.slide {
-  display: none;
+/*.slide{
+	display:none;
 }
-
-#cmi-container-aboutus {
-  width: 0;
-  display: none;
-}
-
+#cmi-container-aboutus{
+	width:0;
+	display:none;
+}*/
 .menu ul {
   color: #FFFFFF;
   font-weight: 300;
@@ -7430,9 +7428,6 @@ body {
 .cmi-foodlist-container {
   height: 150px;
 }
-.cmi-foodlist-container .title {
-  font-size: 22px;
-}
 
 .midBanner {
   background: -moz-linear-gradient(top, #fcfff4 0%, #e9e9ce 100%);
@@ -7474,7 +7469,7 @@ body {
 }
 .cmi-container p {
   line-height: 22px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
 }
 
@@ -7486,6 +7481,29 @@ cmi-message {
   line-height: 22px;
   font-size: 13px;
   font-weight: 300;
+}
+
+.cmi-title {
+  font-size: 20px;
+}
+
+.cmi-details {
+  line-height: 22px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.cmi-container-service {
+  background-color: #959391;
+  padding: 10px;
+  min-height: 330px;
+}
+.cmi-container-service img {
+  height: 190px;
+  width: 205px;
+}
+.cmi-container-service p {
+  padding: 0 8px;
 }
 
 /*# sourceMappingURL=base.css.map */
