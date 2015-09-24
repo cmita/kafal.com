@@ -14,8 +14,35 @@
                 echo $this->partial("/partial/mainMenu.phtml");
              ?>
             <div class='col-md-7 content'>
-                <div>
-                    <?php echo $this->foodItems; ?>
+                <div class='row hidden cmi-container-home' id='cmi-container-aboutus'>
+                    <div class='col-md-12'>
+                        <?php echo $this->aboutus; ?>
+                    </div>
+                </div>
+                <div class='row hidden cmi-container-home' id='cmi-container-drinks'>
+                    <div class='col-md-12'>
+                        <?php echo $this->beer; ?>
+                    </div>
+                </div>
+                <div class='row hidden cmi-container-home' id='cmi-container-lunch'>
+                    <div class='col-md-12'>
+                        <?php echo $this->lunch; ?>
+                    </div>
+                </div>
+                <div class='row hidden cmi-container-home' id='cmi-container-dinner'>
+                    <div class='col-md-12'>
+                        <?php echo $this->dinner; ?>
+                    </div>
+                </div>
+                <div class='row hidden cmi-container-home' id='cmi-container-service'>
+                    <div class='col-md-12'>
+                        <?php echo $this->service; ?>
+                    </div>
+                </div>
+                <div class='row hidden cmi-container-home' id='cmi-container-contact'>
+                    <div class='col-md-12'>
+                        <?php echo $this->contactus; ?>
+                    </div>
                 </div>
             </div>
             <?php  

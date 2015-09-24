@@ -24,11 +24,16 @@ class IndexController extends AbstractActionController
         */
         $layout  = $this->layout();
         $this->layout('/layout/home2.phtml');
-        //$v1 = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "foodmenu"), array()));
         
-        $v1 = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "tabmenu"), array()));
-           
-        $this->layout()->addChild($v1, "foodItems");  
+        $aboutusView = $this->forward()->dispatch("Application\Controller\Index", array_merge(array('action' =>  "about"), array()));
+        
+        $beerView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "taggedmenu"), array('tag'=> array('beer'=>"Beer",'wine'=>"Wine",'cocktail'=>'Cocktails','mocktails'=>"Mocktails"))));
+        //$lunchView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "tabmenu"), array()));
+        //$dinnerView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "tabmenu"), array()));
+        //$serviceView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "tabmenu"), array()));
+         
+        $this->layout()->addChild($beerView, "beer");
+        $this->layout()->addChild($aboutusView, "aboutus");  
         
         
         //$this->layout()->setVariable('current_site_details', $currentSiteDetails->currentSiteDetails);
@@ -51,11 +56,12 @@ class IndexController extends AbstractActionController
         //$this->layout()->addChild($v1, "footItems");
     }
      public function aboutAction(){
-        $this->layout('/layout/about.phtml');
-        $layout  = $this->layout();
-        //$v1 = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "tabmenu"), array()));
+         $view = new ViewModel();
+         $view->setTemplate("application/index/about.phtml");
          
-        //$this->layout()->addChild($v1, "footItems");
+         $view = new ViewModel();
+         return $view;
+        
     }
     
 }

@@ -14,10 +14,6 @@ use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
-    public function indexAction(){
-        
-        
-    }
     
     public function foodmenuAction()
     {
@@ -27,7 +23,7 @@ class IndexController extends AbstractActionController
         $foodItem = $foodObj->getFoodMenu();
         
         $view = new ViewModel();
-        $view->setTemplate("food/index/foodmenu.phtml"); //foo/baz-bat/do-something-crazy
+        $view->setTemplate("food/index/foodmenu.phtml"); 
         
         $variables = array(
             'foodItem' => $foodItem,
@@ -39,7 +35,29 @@ class IndexController extends AbstractActionController
         return $view;
     }
     
-
+    public function taggedmenuAction(){
+        
+        
+        $sm = $this->getServiceLocator();
+        $foodObj = $sm->get("Food\Model\FoodModel");
+        $tags= $this->params('tag');
+        foreach($tags as $tag=> $title){
+            $tagData[$tag]['data'] = $foodObj->getFoodMenuByTag($tag);
+            $tagData[$tag]['title'] = $title;
+        }
+        $view = new ViewModel();
+        $view->setTemplate("food/index/taggedmenu.phtml"); 
+        
+        $variables = array(
+            'tagData' => $tagData
+        );
+        
+        $view = new ViewModel();
+        $view->setVariables($variables);
+        $this->layout()->setVariables($variables);
+        return $view;
+    }
+    
     public function tabmenuAction()
     {
     
