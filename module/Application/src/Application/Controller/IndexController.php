@@ -55,7 +55,8 @@ class IndexController extends AbstractActionController
          
         //$this->layout()->addChild($v1, "footItems");
     }
-     public function aboutAction(){
+    
+    public function aboutAction(){
          $view = new ViewModel();
          $view->setTemplate("application/index/about.phtml");
          

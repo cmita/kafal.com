@@ -7320,7 +7320,7 @@ button.close {
   }
 }
 /*****************Color*********/
-html {
+HTML {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', Arial, sans-serif;
@@ -7349,7 +7349,12 @@ body {
 }
 
 .slide {
-  width: 0px;
+  display: none;
+}
+
+#cmi-container-aboutus {
+  width: 0;
+  display: none;
 }
 
 .menu ul {
