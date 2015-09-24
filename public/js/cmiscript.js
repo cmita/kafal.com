@@ -7,8 +7,8 @@ $(document).ready(function(){
 	});
 
 	$('.about').click(function(){
-		//alert("here");
-		$("#cmi-container-aboutus").animate({width:'880px',opacity:'0.8'},"slow");
-		$(".slide").css({'display':'block'});
+		//$("#cmi-container-aboutus").animate({width:'880px',opacity:'0.8'},"slow");
+		//$(".slide").css({'display':'block'});
+		$("#cmi-container-aboutus").slideDown(6000);
 	})
 });
