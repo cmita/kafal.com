@@ -28,10 +28,10 @@ class IndexController extends AbstractActionController
         $aboutusView = $this->forward()->dispatch("Application\Controller\Index", array_merge(array('action' =>  "about"), array()));
         
         $beerView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "taggedmenu"), array('tag'=> array('beer'=>"Beer",'wine'=>"Wine",'cocktail'=>'Cocktails','mocktails'=>"Mocktails"))));
-        //$lunchView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "tabmenu"), array()));
-        //$dinnerView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "tabmenu"), array()));
-        //$serviceView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "tabmenu"), array()));
-         
+        $lunchView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "taggedmenu"), array('tag'=> array('appitizer'=>"Appitizer",'lunch'=>"Lunch"))));
+
+
+        $this->layout()->addChild($lunchView, "lunch");
         $this->layout()->addChild($beerView, "beer");
         $this->layout()->addChild($aboutusView, "aboutus");  
         

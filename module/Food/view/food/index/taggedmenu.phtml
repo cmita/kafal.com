@@ -1,7 +1,7 @@
 
      <?php 
         foreach($this->tagData as $dataSet){
-            echo "<div class='row back-img'>";
+            echo "<div class='row'>";
             echo "<h4>" . $dataSet['title'] . "</h4>";
             echo $this->partialLoop('food/menuitem-list.phtml', $dataSet['data']);
             echo "</div>";
