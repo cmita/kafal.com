@@ -18,6 +18,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <?php echo $this->headTitle($this->translate('Kafal'))->setSeparator(' - ')->setAutoEscape(false) ?>
 
     <?php echo $this->headMeta()
@@ -40,33 +41,7 @@
         ->prependFile($this->basePath('js/html5shiv.min.js'),   'text/javascript', array('conditional' => 'lt IE 9',))
     ; ?>
 
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
-      function initialize() {
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
-          center: new google.maps.LatLng(44.5403, -78.5463),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-
-
-    $(document).ready(function(){
-        var body = $('.content');
-        var menu = $('.slide');
-        var menuWidth = $('.slide').width();
-        $('.contact').click(function(){
-            //$(".slide").css({'background':'red;'});
-            $(".slide").animate({width:'880px',opacity:'0.8'},"slow");
-             //alert("here");
-        })
-    })
-
-
-
-    </script>
+ 
+    
     
 </head>
