@@ -26,14 +26,18 @@ class IndexController extends AbstractActionController
         $this->layout('/layout/home2.phtml');
         
         $aboutusView = $this->forward()->dispatch("Application\Controller\Index", array_merge(array('action' =>  "about"), array()));
+        $contactView = $this->forward()->dispatch("Application\Controller\Index", array_merge(array('action' =>  "contact"), array()));
+        $serviceView = $this->forward()->dispatch("Application\Controller\Index", array_merge(array('action' =>  "service"), array()));
         
         $beerView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "taggedmenu"), array('tag'=> array('beer'=>"Beer",'wine'=>"Wine",'cocktail'=>'Cocktails','mocktails'=>"Mocktails"))));
-        $lunchView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "taggedmenu"), array('tag'=> array('appitizer'=>"Appitizer",'lunch'=>"Lunch"))));
+        $lunchView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "taggedmenu"), array('tag'=> array('appetizer'=>"Appitizer",'entry'=>"Entry"))));
 
 
         $this->layout()->addChild($lunchView, "lunch");
         $this->layout()->addChild($beerView, "beer");
-        $this->layout()->addChild($aboutusView, "aboutus");  
+        $this->layout()->addChild($aboutusView, "aboutus");
+        $this->layout()->addChild($contactView, "contactus");
+        $this->layout()->addChild($serviceView, "service");
         
         
         //$this->layout()->setVariable('current_site_details', $currentSiteDetails->currentSiteDetails);
@@ -49,19 +53,29 @@ class IndexController extends AbstractActionController
     }
 
     public function contactAction(){
-        $this->layout('/layout/about.phtml');
-        $layout  = $this->layout();
-        //$v1 = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "tabmenu"), array()));
+        $view = new ViewModel();
+        $view->setTemplate("application/index/contact.phtml");
          
-        //$this->layout()->addChild($v1, "footItems");
+        $view = new ViewModel();
+        return $view;
     }
-     public function aboutAction(){
+    
+    public function aboutAction(){
          $view = new ViewModel();
          $view->setTemplate("application/index/about.phtml");
          
          $view = new ViewModel();
          return $view;
         
+    }
+    
+    public function serviceAction(){
+        $view = new ViewModel();
+        $view->setTemplate("application/index/service.phtml");
+         
+        $view = new ViewModel();
+        return $view;
+    
     }
     
 }

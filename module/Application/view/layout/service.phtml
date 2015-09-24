@@ -1,0 +1,63 @@
+<?php 
+    echo $this->doctype(); 
+?>
+
+<html lang="en">
+    <?php echo $this->partial("/partial/head.phtml");?>
+        
+    <body>
+        <?php 
+            echo $this->partial("/partial/logoHeader.phtml");
+        ?>
+        <div class='row'>
+           <?php  
+                echo $this->partial("/partial/mainMenu.phtml");
+             ?>
+            <div class='col-md-7 content'>
+                <div class='row back-img'>
+                    <div class ="clo-lg-6 col-md-6 col-sm-12">
+                        <h4>
+                            Address
+                        </h4>
+                        <p class="cmi-message">
+                            2199 Bancroft Ave<br/>
+                            Santa Rosa, California<br/>
+                            96990
+                        </p>
+                        <p class="comment">
+                            Please send your comment and queries in the <strong>kafal@gmail.com</strong> to improve our service or</br>
+                            Fill out the form
+
+                        </p>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone:</label>
+                                <input type="number" class="form-control" id="phone">
+                            </div>
+                            <div class="form-group">
+                                <p><label for="phone">Message:</label></p>
+                               <textarea rows="4" cols="50"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                     <div class ="clo-lg-6 col-md-6 col-sm-12">
+                       <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+            <?php  
+                echo $this->partial("/partial/sideContent.phtml");
+             ?>
+        </div>
+    </body>
+</html>
+
