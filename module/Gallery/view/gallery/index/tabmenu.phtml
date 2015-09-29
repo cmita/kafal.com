@@ -1,0 +1,14 @@
+<div class='row back-img'>
+
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="cmi-tab-appitizer">
+         <?php echo $this->partialLoop('food/menuitem-list.phtml', $this->appitizer);?>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="cmi-tab-entry">
+        <?php echo $this->partialLoop('food/menuitem-list.phtml', $this->entry);?>
+    </div>
+  </div>
+
+</div>

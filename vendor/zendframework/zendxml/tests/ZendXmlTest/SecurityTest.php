@@ -58,7 +58,7 @@ XML;
 
     public function testScanSimpleXmlResult()
     {
-        $result = XmlSecurity::scan($this->getXml());
+        $result = XmlSecurity::scan($this->_getXml());
         $this->assertTrue($result instanceof SimpleXMLElement);
         $this->assertEquals($result->result, 'test');
     }
@@ -66,7 +66,7 @@ XML;
     public function testScanDom()
     {
         $dom = new DOMDocument('1.0');
-        $result = XmlSecurity::scan($this->getXml(), $dom);
+        $result = XmlSecurity::scan($this->_getXml(), $dom);
         $this->assertTrue($result instanceof DOMDocument);
         $node = $result->getElementsByTagName('result')->item(0);
         $this->assertEquals($node->nodeValue, 'test');
@@ -96,7 +96,7 @@ XML;
     public function testScanFile()
     {
         $file = tempnam(sys_get_temp_dir(), 'ZendXml_Security');
-        file_put_contents($file, $this->getXml());
+        file_put_contents($file, $this->_getXml());
 
         $result = XmlSecurity::scanFile($file);
         $this->assertTrue($result instanceof SimpleXMLElement);
@@ -123,7 +123,7 @@ XML;
         $this->assertTrue($result->validate());
     }
 
-    protected function getXml()
+    protected function _getXml()
     {
         return <<<XML
 <?xml version="1.0"?>
@@ -131,5 +131,7 @@ XML;
     <result>test</result>
 </results>
 XML;
-    }
+
+    }    
+    
 }

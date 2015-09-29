@@ -12,6 +12,8 @@ namespace ZendXml\Exception;
 /**
  * Runtime exception
  */
-class RuntimeException extends \RuntimeException implements ExceptionInterface
+class RuntimeException
+    extends \RuntimeException
+    implements ExceptionInterface
 {
 }

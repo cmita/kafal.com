@@ -7,10 +7,10 @@ $(document).ready(function(){
 	});
 
 	$('.about').click(function(){
-		//$("#cmi-container-aboutus").animate({width:'880px',opacity:'0.8'},"slow");
-		//$(".slide").css({'display':'block'});
 		$("#cmi-container-aboutus").slideDown(6000);
 	})
+	
+	$(".fancybox").fancybox();
 });
  function initialize() {
     var mapCanvas = document.getElementById('map');
