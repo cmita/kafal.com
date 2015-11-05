@@ -16,31 +16,42 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        /*
-        $currentSiteDetails = new Container('currentSiteDetails');
-        $siteLayout = $currentSiteDetails->currentSiteDetails['layout'];
-        $siteLayoutConfig = $this->_getLayoutConfig()['layouttype'];//
-        $widgetConfigArry = $this->_getLayoutConfig()['widget'];//
-        */
+        $preview =$_GET['preview'];
+        if(empty($preview)){
+            $layout  = $this->layout();
+            $this->layout('/layout/under_construction.phtml');
+        }else{
+        
+        
         $layout  = $this->layout();
         $this->layout('/layout/home2.phtml');
+        
+        //$currentSiteDetails = new Container('currentSiteDetails');
+        //$siteLayout = $currentSiteDetails->currentSiteDetails['layout'];
+       // $siteLayoutConfig = $this->_getLayoutConfig()['layouttype'];//
+        //$widgetConfigArry = $this->_getLayoutConfig()['widget'];//
+        
+        
         
         $aboutusView = $this->forward()->dispatch("Application\Controller\Index", array_merge(array('action' =>  "about"), array()));
         $contactView = $this->forward()->dispatch("Application\Controller\Index", array_merge(array('action' =>  "contact"), array()));
         $serviceView = $this->forward()->dispatch("Application\Controller\Index", array_merge(array('action' =>  "service"), array()));
         
-        $beerView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "taggedmenu"), array('tag'=> array('beer'=>"BEER",'wine'=>"WINE",'cocktail'=>'COCKTAIL','mocktails'=>"MOCKTAILS"))));
-        $lunchView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "taggedmenu"), array('tag'=> array('appetizer'=>"APPETIZER",'entry'=>"ENTRY"))));
-        $galleryView = $this->forward()->dispatch("Gallery\Controller\Index", array_merge(array('action' =>  "gallery"), array('tag'=> 'food')));
+        $beerView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "taggedmenu"), array('tag'=> array('beer'=>"BOTTLED BEER",'cocktail'=>'ALCOHOLIC DRINKS (COCKTAIL)','mocktails'=>"NON-ALCOHOLIC DRINK (MOCKTAILS)", "beverages" => 'Beverages'))));
+        $menuView = $this->forward()->dispatch("Food\Controller\Index", array_merge(array('action' =>  "taggedmenu"), array('tag'=> 
+                        array('appetizers'=>"APPETIZER",'street'=>"Street Speciality",'specialities'=>"Himalayan Specialities",'soups'=>"Soup & Salad",'vegetarian'=>"Vegeterian",
+                            'chicken'=>"Chicken",'lamb'=>"Lamb",'seafood'=>"Seafood",'tandoori'=>"Tamdoori",'speciality'=>"speciality",'wraps'=>"Wraps n Roll",'rice'=>"Biryany n Fired Rice",
+                            'bread'=>"bread",'sides'=>"sides",'deserts'=>"deserts"))));
+        $galleryView = $this->forward()->dispatch("Application\Controller\Index", array_merge(array('action' =>  "gallery"), array('tag'=> 'food')));
         
-        $this->layout()->addChild($lunchView, "lunch");
+        $this->layout()->addChild($menuView, "menu");
         $this->layout()->addChild($beerView, "beer");
         $this->layout()->addChild($aboutusView, "aboutus");
         $this->layout()->addChild($contactView, "contactus");
         $this->layout()->addChild($serviceView, "service");
         $this->layout()->addChild($galleryView, "gallery");
         
-        
+        }
         //$this->layout()->setVariable('current_site_details', $currentSiteDetails->currentSiteDetails);
         //$this->layout()->setVariable('currentLayoutConfigArry', $currentLayoutConfigArry);
     }
@@ -77,6 +88,32 @@ class IndexController extends AbstractActionController
         $view = new ViewModel();
         return $view;
     
+    }
+    
+
+    public function galleryAction(){
+    
+        //$sm = $this->getServiceLocator();
+        //$galleryObj = $sm->get("Gallery\Model\GalleryModel");
+        //$tag= $this->params('tag');
+    
+        $view = new ViewModel();
+        $view->setTemplate("application/index/gallery.phtml");
+    
+        $gallerySet= array(array('name'=> 'kafalrestaurant1'),array('name'=>'kafalrestaurant2'),array('name'=>'kafalrestaurant3'),array('name'=>'kafalrestaurant4'));
+    
+        $variables = array(
+            'gallerySet' => $gallerySet
+        );
+    
+        $view = new ViewModel();
+        $view->setVariables($variables);
+        $this->layout()->setVariables($variables);
+        return $view;
+    }
+    
+    public function submitcontactAction(){
+        
     }
     
 }

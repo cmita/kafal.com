@@ -7345,10 +7345,8 @@ a {
   text-align: center;
 }
 .header .logo img {
-  width: 101%;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #555;
-  padding-bottom: 35px;
+  width: auto;
+  height: 220px;
   padding-top: 10px;
 }
 
@@ -7378,7 +7376,6 @@ a {
 }
 
 .content {
-  background-image: url("http://american.expert/wp-content/uploads/2015/03/cibo-indiano-1.jpg");
   min-height: 400px;
 }
 .content .back-img {
@@ -7513,10 +7510,15 @@ cmi-message {
 .cmi-thumbnail-img {
   background-repeat: no-repeat;
   margin: 0 auto;
-  background-size: 100% auto;
   width: 100%;
   height: 0px;
   padding-top: 53.5%;
+}
+
+.cmi-dark-bg {
+  background-color: #000000;
+  color: #FFFFFF;
+  min-height: 400px;
 }
 
 /*# sourceMappingURL=base.css.map */

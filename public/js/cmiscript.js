@@ -1,18 +1,16 @@
 $(document).ready(function(){
+	$(".hide-initially").hide();
 	$(".cmi-mainnav" ).click(function() {
 	  var href = $(this).attr('href');
 	  var showContainerId = "#cmi-container-"+ href.replace("#","");
-	  $(".cmi-container-home").addClass("hidden");
-	  $(showContainerId).removeClass("hidden").addClass("show");
+	  $(".cmi-container-home").hide();
+	  $(showContainerId).slideDown("slow");
 	});
-
-	$('.about').click(function(){
-		$("#cmi-container-aboutus").slideDown(6000);
-	})
 	
 	$(".fancybox").fancybox();
 });
- function initialize() {
+
+function initialize() {
     var mapCanvas = document.getElementById('map');
     var mapOptions = {
       center: new google.maps.LatLng(44.5403, -78.5463),
@@ -20,6 +18,7 @@ $(document).ready(function(){
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(mapCanvas, mapOptions)
-  }
-  google.maps.event.addDomListener(window, 'load', initialize);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
 

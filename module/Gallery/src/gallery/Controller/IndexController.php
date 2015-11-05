@@ -37,14 +37,14 @@ class IndexController extends AbstractActionController
     
     public function galleryAction(){
         
-        $sm = $this->getServiceLocator();
-        $galleryObj = $sm->get("Gallery\Model\GalleryModel");
-        $tag= $this->params('tag');
+        //$sm = $this->getServiceLocator();
+        //$galleryObj = $sm->get("Gallery\Model\GalleryModel");
+        //$tag= $this->params('tag');
         
         $view = new ViewModel();
         $view->setTemplate("gallery/index/gallery.phtml"); 
         
-        $gallerySet= array(array('name'=> 'bara'),array('name'=>'chatamari'),array('name'=>'chawmein'),array('name'=>'momo'),array('name'=>'one'),array('name'=>'two'),array('name'=>'three'),array('name'=>'four'),array('name'=>'five'),array('name'=>'six'),array('name'=>'url'));
+        $gallerySet= array(array('name'=> 'kafalrestaurant1'),array('name'=>'kafalrestaurant2'),array('name'=>'kafalrestaurant3'),array('name'=>'kafalrestaurant4'));
         
         $variables = array(
             'gallerySet' => $gallerySet

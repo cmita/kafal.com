@@ -15,39 +15,38 @@
                     echo $this->partial("/partial/mainMenu.phtml");
                  ?>
                 <div class='col-md-7 content'>
-                    <div class='row hidden cmi-container-home back-img' id='cmi-container-aboutus'>
+                    <div class='row cmi-container-home cmi-dark-bg' id='cmi-container-home'>
                         <div class='col-md-12'>
-                            <?php echo $this->aboutus; ?>
+                            <?php  
+                                echo $this->partial("/partial/homeslider.phtml");
+                             ?>
                         </div>
                     </div>
-                    <div class='row hidden cmi-container-home back-img' id='cmi-container-drinks'>
+                    
+                    <div class='row back-img'>
                         <div class='col-md-12'>
-                            <?php echo $this->beer; ?>
+                            <div class='cmi-container-home hide-initially' id='cmi-container-aboutus'>
+                                <?php echo $this->aboutus; ?>
+                            </div>
+                            <div class='cmi-container-home hide-initially' id='cmi-container-drinks'>
+                                <?php echo $this->beer; ?>
+                            </div>
+                            <div class='cmi-container-home hide-initially' id='cmi-container-menu'>
+                                <?php echo $this->menu; ?>
+                            </div>
+                            
+                            <div class='cmi-container-home hide-initially' id='cmi-container-gallery'>
+                                <?php echo $this->gallery; ?>
+                            </div>
+                            <div class='cmi-container-home hide-initially' id='cmi-container-service'>
+                                <?php echo $this->service; ?>
+                            </div>
+                            <div class='cmi-container-home hide-initially' id='cmi-container-contact'>
+                               <?php echo $this->contactus; ?>
+                            </div>
                         </div>
                     </div>
-                    <div class='row hidden cmi-container-home back-img' id='cmi-container-lunch'>
-                        <div class='col-md-12'>
-                            <?php echo $this->lunch; ?>
-                        </div>
-                    </div>
-                    <div class='row hidden cmi-container-home back-img' id='cmi-container-dinner'>
-                        <div class='col-md-12'>
-                            <?php echo $this->dinner; ?>
-                        </div>
-                    </div>
-                    <div class='row hidden cmi-container-home' id='cmi-container-gallery'>
-                        <div class='col-md-12'>
-                            <?php echo $this->gallery; ?>
-                        </div>
-                    </div>
-                    <div class='row hidden cmi-container-home back-img' id='cmi-container-service'>
-                        <div class='col-md-12'>
-                            <?php echo $this->service; ?>
-                        </div>
-                    </div>
-                    <div class='row hidden cmi-container-home' id='cmi-container-contact'>
-                       <?php echo $this->contactus; ?>
-                    </div>
+                    
                 </div>
             
             <?php  
